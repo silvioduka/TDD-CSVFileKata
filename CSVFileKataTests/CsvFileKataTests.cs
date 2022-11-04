@@ -9,7 +9,7 @@ namespace CSVFileKataTests
     [TestFixture]
     public class CsvFileKataTests
     {
-        private static Customer Customer(string name, string contactNumber)
+        private static Customer CreateCustomer(string name, string contactNumber)
         {
             return new Customer
             {
@@ -22,7 +22,7 @@ namespace CSVFileKataTests
         public void Write_GivenOneCustomer_ShouldWriteCustomerDataAsCsvLineToProvidedFile()
         {
             // Arrange
-            var customer = Customer("Brandon Page", "1234555678");
+            var customer = CreateCustomer("Brandon Page", "1234555678");
             var fileSystem = Substitute.For<IFileSystem>();
             var sut = new CustomerCsvFileWriter(fileSystem);
 
@@ -37,8 +37,8 @@ namespace CSVFileKataTests
         public void Write_GivenTwoCustomers_ShouldWriteBothCustomersDataAsCsvLinesToProvidedFile()
         {
             // Arrange
-            var customer1 = Customer("Jayd Page", "23456789");
-            var customer2 = Customer("Peter Wiles", "98765432");
+            var customer1 = CreateCustomer("Jayd Page", "23456789");
+            var customer2 = CreateCustomer("Peter Wiles", "98765432");
             
             var fileSystem = Substitute.For<IFileSystem>();
             var sut = new CustomerCsvFileWriter(fileSystem);
@@ -55,9 +55,9 @@ namespace CSVFileKataTests
         public void Write_GivenThreeCustomers_ShouldWriteAllCustomersDataAsCsvLinesToProvidedFile()
         {
             // Arrange
-            var customer1 = Customer("Mark Pearl", "1234567890");
-            var customer2 = Customer("Sylvain", "0987654321");
-            var customer3 = Customer("Bob", "5432167890");
+            var customer1 = CreateCustomer("Mark Pearl", "1234567890");
+            var customer2 = CreateCustomer("Sylvain", "0987654321");
+            var customer3 = CreateCustomer("Bob", "5432167890");
 
             var fileSystem = Substitute.For<IFileSystem>();
             var sut = new CustomerCsvFileWriter(fileSystem);
