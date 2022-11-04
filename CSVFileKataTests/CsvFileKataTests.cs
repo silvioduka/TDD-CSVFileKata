@@ -9,15 +9,20 @@ namespace CSVFileKataTests
     [TestFixture]
     public class CsvFileKataTests
     {
+        private static Customer Customer(string name, string contactNumber)
+        {
+            return new Customer
+            {
+                Name = name,
+                ContactNumber = contactNumber
+            };
+        }
+
         [Test]
         public void Write_GivenOneCustomer_ShouldWriteCustomerDataAsCsvLineToProvidedFile()
         {
             // Arrange
-            var customer = new Customer
-            {
-                Name = "Brandon Page",
-                ContactNumber = "1234555678"
-            };
+            var customer = Customer("Brandon Page", "1234555678");
             var fileSystem = Substitute.For<IFileSystem>();
             var sut = new CustomerCsvFileWriter(fileSystem);
 
@@ -32,16 +37,9 @@ namespace CSVFileKataTests
         public void Write_GivenTwoCustomers_ShouldWriteBothCustomersDataAsCsvLinesToProvidedFile()
         {
             // Arrange
-            var customer1 = new Customer
-            {
-                Name = "Jayd Page",
-                ContactNumber = "23456789"
-            };
-            var customer2 = new Customer
-            {
-                Name = "Peter Wiles",
-                ContactNumber = "98765432"
-            };
+            var customer1 = Customer("Jayd Page", "23456789");
+            var customer2 = Customer("Peter Wiles", "98765432");
+            
             var fileSystem = Substitute.For<IFileSystem>();
             var sut = new CustomerCsvFileWriter(fileSystem);
 
@@ -57,21 +55,10 @@ namespace CSVFileKataTests
         public void Write_GivenThreeCustomers_ShouldWriteAllCustomersDataAsCsvLinesToProvidedFile()
         {
             // Arrange
-            var customer1 = new Customer
-            {
-                Name = "Mark Pearl",
-                ContactNumber = "1234567890"
-            };
-            var customer2 = new Customer
-            {
-                Name = "Sylvain",
-                ContactNumber = "0987654321"
-            };
-            var customer3 = new Customer
-            {
-                Name = "Bob",
-                ContactNumber = "5432167890"
-            };
+            var customer1 = Customer("Mark Pearl", "1234567890");
+            var customer2 = Customer("Sylvain", "0987654321");
+            var customer3 = Customer("Bob", "5432167890");
+
             var fileSystem = Substitute.For<IFileSystem>();
             var sut = new CustomerCsvFileWriter(fileSystem);
 
