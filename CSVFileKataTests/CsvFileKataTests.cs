@@ -1,8 +1,8 @@
-﻿using CSVFileKata1;
+﻿using CSVFileKata;
 using NSubstitute;
 using NUnit.Framework;
 
-namespace CSVFileKata
+namespace CSVFileKataTests
 {
     [TestFixture]
     public class CsvFileKataTests

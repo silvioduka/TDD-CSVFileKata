@@ -1,4 +1,4 @@
-﻿namespace CSVFileKata1
+﻿namespace CSVFileKata
 {
     public class Customer
     {
