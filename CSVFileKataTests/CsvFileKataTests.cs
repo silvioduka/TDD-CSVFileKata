@@ -8,7 +8,7 @@ namespace CSVFileKataTests
     public class CsvFileKataTests
     {
         [Test]
-        public void Write_Given_Should()
+        public void Write_GivenOneCustomer_ShouldWriteCustomerDataAsCsvLineToProvidedFile()
         {
             // Arrange
             var customer = new Customer
@@ -20,10 +20,10 @@ namespace CSVFileKataTests
             var sut = new CustomerCsvFileWriter(fileSystem);
 
             // Act
-            sut.Write("", customer);
+            sut.Write("customer.csv", customer);
 
             // Assert
-            fileSystem.Received(1).WriteLine("", "Brandon Page,1234555678");
+            fileSystem.Received(1).WriteLine("customer.csv", "Brandon Page,1234555678");
         }
     }
 }
