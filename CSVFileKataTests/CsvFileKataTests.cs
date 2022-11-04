@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CSVFileKata1;
 using NSubstitute;
 using NUnit.Framework;
 
@@ -40,7 +36,7 @@ namespace CSVFileKata
             _fileSystem = fileSystem;
         }
 
-        internal void Write(string fileName, Customer customer)
+        public void Write(string fileName, Customer customer)
         {
             _fileSystem.WriteLine("", "Brandon Page,1234555678");
         }

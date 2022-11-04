@@ -1,6 +1,6 @@
-﻿namespace CSVFileKata
+﻿namespace CSVFileKata1
 {
-    internal class Customer
+    public class Customer
     {
         public string Name { get; set; }
         public string ContactNumber { get; set; }

@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSVFileKata", "CSVFileKata\CSVFileKata.csproj", "{71232B75-6024-4BCC-B977-A957DD1989D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSVFileKata", "CSVFileKata\CSVFileKata.csproj", "{3F19953B-BACE-41EA-8FD6-7468CB90CDB9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSVFileKataTests", "CSVFileKataTests\CSVFileKataTests.csproj", "{4FD432AB-F585-4BB1-9491-FB4E61203366}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{71232B75-6024-4BCC-B977-A957DD1989D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{71232B75-6024-4BCC-B977-A957DD1989D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{71232B75-6024-4BCC-B977-A957DD1989D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{71232B75-6024-4BCC-B977-A957DD1989D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F19953B-BACE-41EA-8FD6-7468CB90CDB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F19953B-BACE-41EA-8FD6-7468CB90CDB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F19953B-BACE-41EA-8FD6-7468CB90CDB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F19953B-BACE-41EA-8FD6-7468CB90CDB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FD432AB-F585-4BB1-9491-FB4E61203366}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FD432AB-F585-4BB1-9491-FB4E61203366}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FD432AB-F585-4BB1-9491-FB4E61203366}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FD432AB-F585-4BB1-9491-FB4E61203366}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

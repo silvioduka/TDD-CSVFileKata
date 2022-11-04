@@ -1,4 +1,4 @@
-﻿namespace CSVFileKata
+﻿namespace CSVFileKata1
 {
     public interface IFileSystem
     {
