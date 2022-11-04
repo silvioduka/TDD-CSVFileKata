@@ -13,4 +13,12 @@ public class CustomerCsvFileWriter
     {
         _fileSystem.WriteLine("customer.csv", "Brandon Page,1234555678");
     }
+
+    public void Write(string fileName, List<Customer> customers)
+    {
+        foreach (Customer customer in customers)
+        {
+            _fileSystem.WriteLine(fileName, customer.ToString());
+        }
+    }
 }
