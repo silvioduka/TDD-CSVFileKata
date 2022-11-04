@@ -9,11 +9,6 @@ public class CustomerCsvFileWriter
         _fileSystem = fileSystem;
     }
 
-    public void Write(string fileName, Customer customer)
-    {
-        _fileSystem.WriteLine(fileName, customer.ToString());
-    }
-
     public void Write(string fileName, List<Customer> customers)
     {
         foreach (Customer customer in customers)
