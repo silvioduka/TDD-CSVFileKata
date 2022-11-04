@@ -11,7 +11,7 @@ public class CustomerCsvFileWriter
 
     public void Write(string fileName, Customer customer)
     {
-        _fileSystem.WriteLine("customer.csv", "Brandon Page,1234555678");
+        _fileSystem.WriteLine(fileName, customer.ToString());
     }
 
     public void Write(string fileName, List<Customer> customers)
